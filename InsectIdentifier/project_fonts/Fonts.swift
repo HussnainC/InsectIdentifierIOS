@@ -6,12 +6,12 @@
 //
 
 struct Fonts{
-    static let NunitoBold: String = "NunitoBold"
-    static let NunitoRegular: String = "NunitoRegular"
-    static let NunitoLight: String = "NunitoLight"
-    static let NunitoSemiBold: String = "NunitoSemiBold"
-    static let NunitoMedium: String = "NunitoMedium"
-    static let NunitoSemiLight: String = "NunitoSemiLight"
-    static let NunitoBlack: String = "NunitoBlack"
-    static let NunitoExtraBold: String = "NunitoExtraBold"
+    static let NunitoBold: String = "Nunito-Bold"
+    static let NunitoRegular: String = "Nunito-Regular"
+    static let NunitoLight: String = "Nunito-Light"
+    static let NunitoSemiBold: String = "Nunito-SemiBold"
+    static let NunitoMedium: String = "Nunito-Medium"
+    static let NunitoSemiLight: String = "Nunito-SemiLight"
+    static let NunitoBlack: String = "Nunito-Black"
+    static let NunitoExtraBold: String = "Nunito-ExtraBold"
 }
