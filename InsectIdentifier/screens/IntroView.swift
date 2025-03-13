@@ -17,61 +17,73 @@ struct IntroView: View {
     @State private var currentPage = 0
     
     @State private var moveOnHomePage: Bool = false
+    @State private var moveOnPremiumPage: Bool = false
     var body: some View {
-        TabView(selection: $currentPage) {
-            ForEach(0..<pages.count, id: \.self) { index in
-                ZStack{
-                    VStack{
-                        Image(pages[index].image)
-                            .resizable()
-                            .scaledToFill()
-                           
-                            
+        ZStack{
+            TabView(selection: $currentPage) {
+                       ForEach(0..<pages.count, id: \.self) { index in
+                           ZStack{
+                               VStack{
+                                   Image(pages[index].image)
+                                                       .resizable()
+                                                       .scaledToFill()
+                                                       .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                   Spacer().frame(height: UIScreen.main.bounds.height * 0.15)
+                               }
+                           }.tag(index)
                         
-                        Spacer().frame(height: UIScreen.main.bounds.height * 0.15)
-                    }
-                    VStack{
-                        Spacer()
-                        VStack{
-                            Text(pages[index].title).font(.title).fontWeight(.bold).padding(.bottom,5)
-                            Text(pages[index].description).font(.system(size: 14))
-                                .multilineTextAlignment(.center).padding(.horizontal,10).padding(.bottom,5)
-                            
-                            Button(action: {
-                                if(currentPage<pages.count-1){
-                                    currentPage = currentPage+1
-                                }else{
-                                    isFirstRun=false
-                                    moveOnHomePage=true
-                                }
-                            }){
-                                Text("Next")
-                                    .frame(maxWidth: .infinity)
-                                    .padding(.vertical,10)
-                                
-                            }.frame(maxWidth: .infinity).foregroundColor(.white).background(Color.primaryColor).cornerRadius(100)
-                                .padding(.horizontal,15)
-                            
-                            Button(action: {
-                                isFirstRun=false
+                       }
+                   }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            VStack{
+                Spacer()
+                VStack{
+                    Text(pages[currentPage].title).font(.title).fontWeight(.bold).padding(.bottom,5)
+                    Text(pages[currentPage].description).font(.system(size: 14))
+                        .multilineTextAlignment(.center).padding(.horizontal,10).padding(.bottom,5)
+                    
+                    Button(action: {
+                        if(currentPage<pages.count-1){
+                            currentPage = currentPage+1
+                        }else{
+                            isFirstRun=false
+                            if(currentPage == pages.count - 1){
+                                moveOnPremiumPage=true
+                            }else{
                                 moveOnHomePage=true
-                            }){
-                                Text("Skip")
-                                    .frame(maxWidth: .infinity)
-                                    .padding(.vertical,10)
-                                
-                            }.frame(maxWidth: .infinity).foregroundStyle(Color.primaryColor).cornerRadius(100)
-                                .padding(.horizontal,15).padding(.bottom,5)
-                            
-                        }.frame(maxWidth: .infinity).background(.white)
-                            .cornerRadius(20).shadow(radius:2).padding(.horizontal, 30)
-                        Spacer().frame(height: UIScreen.main.bounds.height * 0.05)
-                    }
-                } .tag(index)
+                            }
+                          
+                        }
+                    }){
+                        Text(currentPage == pages.count - 1 ? "Premium upgrade" : "Next")
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical,10)
+                        
+                    }.frame(maxWidth: .infinity).foregroundColor(.white).background(Color.primaryColor).cornerRadius(100)
+                        .padding(.horizontal,15)
+                    
+                    Button(action: {
+                        
+                        isFirstRun=false
+                        moveOnHomePage=true
+                        
+                    }){
+                        Text(currentPage == pages.count - 1 ? "Continue with ads" : "Skip")
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical,10)
+                        
+                    }.frame(maxWidth: .infinity).foregroundStyle(Color.primaryColor).cornerRadius(100)
+                        .padding(.horizontal,15).padding(.bottom,5)
+                    
+                }.frame(maxWidth: .infinity).background(.white)
+                    .cornerRadius(20).shadow(radius:2).padding(.horizontal, 30)
+                Spacer().frame(height: UIScreen.main.bounds.height * 0.05)
             }
-        }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never)).navigationBarBackButtonHidden().navigationDestination(isPresented:$moveOnHomePage) {
+        }.navigationBarBackButtonHidden().navigationDestination(isPresented:$moveOnHomePage) {
             HomeView()
+        }.navigationDestination(isPresented:$moveOnPremiumPage) {
+            PremiumView()
         }
+        
     }
 }
 

@@ -21,18 +21,22 @@ struct LanguageScreenView: View {
         LanguageModel(name: "French",code: "fr"),
         LanguageModel(name: "Indonesian",code: "in")
     ]
+   
     var body: some View {
         VStack {
             TopBarView(title: "Change Languages",onBack: {
-                presentationMode.wrappedValue.dismiss()
+                if(!isFirstRun)
+                {
+                    presentationMode.wrappedValue.dismiss()
+                }
+                   
             }).padding()
             ScrollView {
                 LazyVStack {
                     ForEach(languages) { item in
-                     
                         Button(action: {
                             langCode = item.code
-                        
+                            
                             if isFirstRun {
                                 navigateToIntro = true
                             } else {
@@ -55,15 +59,17 @@ struct LanguageScreenView: View {
                                         .foregroundColor(.accentColor)
                                 }
                             }
-                            .frame(maxWidth: .infinity)
-                            .padding()
+                            .frame(maxWidth: .infinity, alignment: .init(horizontal: .leading, vertical: .center))
+                            .padding(.vertical, 18)
+                            .padding(.horizontal, 15)
+                            .background(Color.surfaceColor)
+                            .cornerRadius(12)
+                            .shadow(radius: 2)
                         }
                         .buttonStyle(PlainButtonStyle())
-                        .background(Color.surfaceColor)
-                        .cornerRadius(10)
-                        .shadow(radius: 2)
+                       
                         .padding(.horizontal)
-                        .padding(.vertical, 2)
+                        .padding(.vertical, 2).foregroundStyle(Color.onSurfaceColor)
                         
                     }
                 }.padding(.top,10)
