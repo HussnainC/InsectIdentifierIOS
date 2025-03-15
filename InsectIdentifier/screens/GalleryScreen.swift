@@ -12,8 +12,10 @@ import Photos
 
 struct GalleryScreen: View {
     @Environment(\.presentationMode) var presentationMode
-   
+    let columns = [GridItem(.flexible()), GridItem(.flexible())]
     @StateObject var viewModel = GalleryViewModel()
+    @State private var isThreadScreen: Bool = false
+    @State private var selectedItem: FileItem?=nil
     var body: some View {
         VStack {
             TopBarView(title: "Gallery", onBack: {
@@ -22,15 +24,23 @@ struct GalleryScreen: View {
             ).padding(.horizontal,15)
             
             ScrollView {
-                           LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
-                               ForEach(viewModel.images) { file in
-                                   GalleryItem(fileItem: file)
-                               }
-                           }
-                           .padding()
-                       }
-          
-        }.navigationBarBackButtonHidden().onAppear{
+                LazyVGrid(columns: columns, spacing: 10) {
+                    ForEach(viewModel.images) { file in
+                        GalleryItem(fileItem: file,onItemClick: {
+                            selectedItem = file
+                            isThreadScreen=true
+                        })
+                            .frame(maxWidth: .infinity)
+                    }
+                }
+                .padding()
+            }
+            
+        }.navigationBarBackButtonHidden().navigationDestination(isPresented: $isThreadScreen, destination: {
+            if(isThreadScreen ){
+                ThreadScreen(fileItem:selectedItem)
+            }
+        }).onAppear{
             checkPhotoLibraryPermission { isPermissionAllowed in
                 if(isPermissionAllowed){
                     print("Permission allowed")
@@ -42,7 +52,7 @@ struct GalleryScreen: View {
                 }
             }
         }
-       
+        
     }
 }
 
@@ -51,16 +61,22 @@ struct GalleryScreen: View {
 struct GalleryItem: View {
     let fileItem: FileItem
     @State private var uiImage: UIImage?
-
+    let onItemClick:() -> Void
     var body: some View {
         VStack {
             if let uiImage = uiImage {
-                Image(uiImage: uiImage)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 150)
-                    .cornerRadius(10)
-                    .shadow(radius: 3)
+              
+                Button(action: onItemClick) {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFill()
+                        .frame( maxHeight: 180)
+                        .frame(width: UIScreen.main.bounds.width / 2 - 20)
+                        .cornerRadius(15)
+                        .shadow(radius: 3)
+                        .clipped()
+                }
+               
             } else {
                 ProgressView()
                     .frame(height: 150)
@@ -70,11 +86,11 @@ struct GalleryItem: View {
             loadImage()
         }
     }
-
+    
     func loadImage() {
         let asset = PHAsset.fetchAssets(withLocalIdentifiers: [fileItem.id], options: nil).firstObject
         let manager = PHImageManager.default()
-
+        
         manager.requestImage(for: asset!,
                              targetSize: CGSize(width: 150, height: 150),
                              contentMode: .aspectFill,
