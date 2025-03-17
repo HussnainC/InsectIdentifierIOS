@@ -27,20 +27,20 @@ struct SplashView: View {
                 )
             }.ignoresSafeArea()
             VStack{
-                   Text("AI Insect")
+                   Text("ai_insect")
                     .font(.custom(Fonts.NunitoBlack, size: 40)).foregroundStyle(Color.primaryColor)
-                Text("Identifier")
+                Text("identifier")
                     .font(.custom(Fonts.NunitoBlack, size: 30)).foregroundStyle(Color.white)
                 Image("butterFlies")
                     .resizable()
                     .frame(width: 266, height: 271)
                     .padding(.vertical, 10)
-                Text("Just getting started? Lets take a tour of this app’s capabilities!").foregroundStyle(Color.surfaceColor).multilineTextAlignment(.center).padding(.horizontal,20)
+                Text("sp_des").foregroundStyle(Color.surfaceColor).multilineTextAlignment(.center).padding(.horizontal,20)
                 
                 Button(action: {
                     isActive = true
                 }) {
-                    Text("Start")
+                    Text("start")
                         .font(.custom(Fonts.NunitoRegular, size: 18))
                         .frame(maxWidth: .infinity)
                         .padding()

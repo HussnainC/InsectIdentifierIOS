@@ -1,0 +1,52 @@
+//
+//  Untitled.swift
+//  InsectIdentifier
+//
+//  Created by Hussnain on 17/03/2025.
+//
+
+"ai_insect" = "Inseto IA";
+"identifier" = "Identificador";
+"sp_des" = "Começando agora? Vamos explorar os recursos deste aplicativo!";
+"start" = "Iniciar";
+"capture_img" = "Capturar Imagem";
+"gallery" = "Galeria";
+"hello" = "Olá";
+"home_top" = "Identifique, aprenda e explore instantaneamente";
+"buttont_1" = "Identificar Inseto";
+"button_des_1" = "Capture uma foto e identifique detalhes dos insetos";
+"button_des_2" = "Selecione da galeria e identifique detalhes dos insetos";
+"introt1" = "Capturar Inseto";
+"introd1" = "Revelando o fascinante mundo dos insetos ao reconhecer suas características únicas, habitats e papéis na natureza.";
+"introt2" = "Identificação de Insetos";
+"introd2" = "Revelando o fascinante mundo dos insetos ao reconhecer suas características únicas, habitats e papéis na natureza.";
+"introt3" = "Assistência IA";
+"introd3" = "Este recurso usa reconhecimento de imagem avançado e aprendizado de máquina para aprimorar o estudo e a conscientização sobre insetos.";
+"pu" = "Upgrade para Premium";
+"nt" = "Próximo";
+"cwa" = "Continuar com anúncios";
+"skp" = "Pular";
+"en" = "Inglês";
+"es" = "Espanhol";
+"pt" = "Português";
+"hi" = "Hindi";
+"tr" = "Turco";
+"fr" = "Francês";
+"in" = "Indonésio";
+"cl" = "Alterar Idioma";
+"afe" = "Experiência Sem Anúncios";
+"per_month" = "Por Mês";
+"per_des" = "Esta assinatura será renovada automaticamente pelo mesmo período, a menos que seja cancelada pelo menos 24 horas antes do término do período atual. Você pode gerenciar essa assinatura na Play Store > Menu > Assinaturas. Se você assinou esta oferta, um botão de cancelamento aparecerá aqui para que você possa cancelá-la a qualquer momento. Ao continuar, você confirma que aceita o Acordo e a Política de Privacidade.";
+"weekly" = "Semanal";
+"monthly" = "Mensal";
+"yearly" = "Anual";
+"getp" = "Obter Premium";
+"settings" = "Configurações";
+"introduction" = "Introdução";
+"pp" = "Política de Privacidade";
+"sa" = "Compartilhar Aplicativo";
+"message" = "Mensagem";
+"ftgr" = "Falha ao obter resposta";
+"loading" = "Carregando...";
+"me" = "Eu";
+"ai" = "IA";

@@ -18,9 +18,9 @@ struct PremiumView: View {
     @State private var selectedTab: Int = 1
     
     private let tabs: [TabModel] = [
-        TabModel(id: 1, title: "Weekly"),
-        TabModel(id: 2, title: "Monthly"),
-        TabModel(id: 3, title: "Yearly")
+        TabModel(id: 1, title: "weekly"),
+        TabModel(id: 2, title: "monthly"),
+        TabModel(id: 3, title: "yearly")
     ]
     
     var body: some View {
@@ -32,13 +32,13 @@ struct PremiumView: View {
                 .scaledToFit()
                 .frame(height: 140).frame(maxWidth: .infinity)
             
-            ImageLabel(icon: "ads_stop", label: "Ad-Free Experience")
+            ImageLabel(icon: "ads_stop", label: "afe")
             
             tabSelectionView
             
-            PremiumBoard(price: "$34.99", title: "Per Month")
+            PremiumBoard(price: "$34.99", title: "per_month")
             
-            Text("This subscription will automatically extend for the same duration unless canceled at least 24 hours before te current period ends. You can manage this subscription from Play Store > Menu > Subscriptions. If you subscribed this offer a cancel button will appear here so you can cancel it any time. By proceeding confirm that you accept Agreement and Privacy Policy .")
+            Text("per_des")
                 .font(.footnote)
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
@@ -57,7 +57,7 @@ struct PremiumView: View {
                 .resizable()
                 .frame(width: 24, height: 24)
             
-            Text("Get Premium")
+            Text("getp")
                 .font(.title3).bold()
             
             Spacer()
@@ -88,7 +88,7 @@ struct PremiumView: View {
     
     private var bottomBar: some View {
         Button(action: {}) {
-            Text("Premium Upgrade")
+            Text("pu")
                 .frame(maxWidth: .infinity)
                 .padding()
                 .background(Color.blue)
@@ -124,7 +124,7 @@ struct ImageLabel: View {
             Image(icon)
                 .resizable()
                 .frame(width: 30, height: 30)
-            Text(label)
+            Text(NSLocalizedString(label, comment: ""))
                 .font(.headline)
             Spacer()
         }
@@ -148,7 +148,7 @@ struct PremiumBoard: View {
                     VStack(alignment: .leading) {
                         Text(price)
                             .font(.title).foregroundStyle(Color.white).bold()
-                        Text(title)
+                        Text(NSLocalizedString(title,comment: ""))
                             .font(.subheadline)
                             .foregroundColor(.white.opacity(0.7))
                     }

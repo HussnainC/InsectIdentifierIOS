@@ -1,0 +1,52 @@
+//
+//  Untitled.swift
+//  InsectIdentifier
+//
+//  Created by Hussnain on 17/03/2025.
+//
+
+"ai_insect" = "Insecte IA";
+"identifier" = "Identificateur";
+"sp_des" = "Vous débutez ? Faisons un tour des fonctionnalités de cette application !";
+"start" = "Démarrer";
+"capture_img" = "Capturer une image";
+"gallery" = "Galerie";
+"hello" = "Bonjour";
+"home_top" = "Identifiez instantanément, apprenez et explorez";
+"buttont_1" = "Identification des insectes";
+"button_des_1" = "Prenez une photo et identifiez les détails des insectes";
+"button_des_2" = "Sélectionnez depuis la galerie et identifiez les détails des insectes";
+"introt1" = "Capturer un insecte";
+"introd1" = "Découvrez le monde fascinant des insectes en reconnaissant leurs caractéristiques uniques, habitats et rôles dans la nature.";
+"introt2" = "Identification des insectes";
+"introd2" = "Découvrez le monde fascinant des insectes en reconnaissant leurs caractéristiques uniques, habitats et rôles dans la nature.";
+"introt3" = "Assistance IA";
+"introd3" = "Cette fonctionnalité utilise la reconnaissance d'image avancée et l'apprentissage automatique pour améliorer l'étude et la sensibilisation aux insectes.";
+"pu" = "Mise à niveau Premium";
+"nt" = "Suivant";
+"cwa" = "Continuer avec publicités";
+"skp" = "Passer";
+"en" = "Anglais";
+"es" = "Espagnol";
+"pt" = "Portugais";
+"hi" = "Hindi";
+"tr" = "Turc";
+"fr" = "Français";
+"in" = "Indonésien";
+"cl" = "Changer de langue";
+"afe" = "Expérience sans publicité";
+"per_month" = "Par mois";
+"per_des" = "Cet abonnement se renouvellera automatiquement pour la même durée, sauf annulation au moins 24 heures avant la fin de la période en cours. Vous pouvez gérer cet abonnement dans Play Store > Menu > Abonnements. Si vous avez souscrit à cette offre, un bouton d'annulation apparaîtra ici pour que vous puissiez l'annuler à tout moment. En poursuivant, vous confirmez que vous acceptez l'Accord et la Politique de confidentialité.";
+"weekly" = "Hebdomadaire";
+"monthly" = "Mensuel";
+"yearly" = "Annuel";
+"getp" = "Obtenir Premium";
+"settings" = "Paramètres";
+"introduction" = "Introduction";
+"pp" = "Politique de confidentialité";
+"sa" = "Partager l'application";
+"message" = "Message";
+"ftgr" = "Échec de la récupération de la réponse";
+"loading" = "Chargement...";
+"me" = "Moi";
+"ai" = "IA";

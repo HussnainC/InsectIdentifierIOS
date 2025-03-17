@@ -23,7 +23,7 @@ struct CameraScreen: View {
            
             
             VStack {
-                TopBarView(title: "Capture Image") {
+                TopBarView(title: "capture_img") {
                     presentationMode.wrappedValue.dismiss()
                 }.padding(.horizontal,15)
                 Spacer()

@@ -10,9 +10,9 @@ import SwiftUI
 struct IntroView: View {
     @AppStorage(AppConstants.FIRST_RUN_KEY) private var isFirstRun :Bool = true
     private let pages = [
-        IntroModel(title: "Capture Insect", description: "Unveiling the fascinating world of insects by recognizing their unique features, habitats, and roles in nature.", image:"intro_1"),
-        IntroModel(title: "Insect Identify", description: "Unveiling the fascinating world of insects by recognizing their unique features, habitats, and roles in nature.", image:"intro_2"),
-        IntroModel(title: "AI assistance", description: "This feature uses advanced image recognition and machine learning to enhance insect study and awareness.", image:"intro_3")
+        IntroModel(title: "introt1", description: "introd1", image:"intro_1"),
+        IntroModel(title: "introt2", description: "introd2", image:"intro_2"),
+        IntroModel(title: "introt3", description: "introd3", image:"intro_3")
     ]
     @State private var currentPage = 0
     
@@ -54,7 +54,7 @@ struct IntroView: View {
                           
                         }
                     }){
-                        Text(currentPage == pages.count - 1 ? "Premium upgrade" : "Next")
+                        Text(currentPage == pages.count - 1 ? "pu" : "nt")
                             .frame(maxWidth: .infinity)
                             .padding(.vertical,10)
                         
@@ -67,7 +67,7 @@ struct IntroView: View {
                         moveOnHomePage=true
                         
                     }){
-                        Text(currentPage == pages.count - 1 ? "Continue with ads" : "Skip")
+                        Text(currentPage == pages.count - 1 ? "cwa" : "skp")
                             .frame(maxWidth: .infinity)
                             .padding(.vertical,10)
                         

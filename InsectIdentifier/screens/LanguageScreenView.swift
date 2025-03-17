@@ -8,23 +8,24 @@
 import SwiftUI
 
 struct LanguageScreenView: View {
+    
     @Environment(\.presentationMode) var presentationMode
     @AppStorage(AppConstants.LANG_CODE_KEY) private var langCode: String = "en"
     @AppStorage(AppConstants.FIRST_RUN_KEY) private var isFirstRun :Bool = true
     @State private var navigateToIntro = false
     private let languages = [
-        LanguageModel(name: "English",code: "en"),
-        LanguageModel(name: "Spanish",code: "es"),
-        LanguageModel(name: "Portuguese",code: "pt"),
-        LanguageModel(name: "Hindi",code: "hi"),
-        LanguageModel(name: "Turkish",code: "tr"),
-        LanguageModel(name: "French",code: "fr"),
-        LanguageModel(name: "Indonesian",code: "in")
+        LanguageModel(name: "en",code: "en"),
+        LanguageModel(name: "es",code: "es"),
+        LanguageModel(name: "pt",code: "pt"),
+        LanguageModel(name: "hi",code: "hi"),
+        LanguageModel(name: "tr",code: "tr"),
+        LanguageModel(name: "fr",code: "fr"),
+        LanguageModel(name: "in",code: "in")
     ]
    
     var body: some View {
         VStack {
-            TopBarView(title: "Change Languages",onBack: {
+            TopBarView(title: "cl",onBack: {
                 if(!isFirstRun)
                 {
                     presentationMode.wrappedValue.dismiss()
@@ -36,7 +37,8 @@ struct LanguageScreenView: View {
                     ForEach(languages) { item in
                         Button(action: {
                             langCode = item.code
-                            
+//                            UserDefaults.standard.setValue([item.code], forKey: "AppleLanguages")
+//                               UserDefaults.standard.synchronize() // Force update
                             if isFirstRun {
                                 navigateToIntro = true
                             } else {
@@ -48,7 +50,7 @@ struct LanguageScreenView: View {
                                     .resizable()
                                     .frame(width: 31, height: 31)
                                 
-                                Text(item.name)
+                                Text(NSLocalizedString(item.code,comment:""))
                                     .font(.body)
                                     .padding(.leading, 5)
                                 

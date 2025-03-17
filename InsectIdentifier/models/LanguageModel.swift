@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import SwiftUICore
 struct LanguageModel: Identifiable {
     let id = UUID()
-    let name: String
+    let name: LocalizedStringKey
     var code:String
 }

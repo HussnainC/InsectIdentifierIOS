@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct InsectIdentifierApp: App {
+    @AppStorage(AppConstants.LANG_CODE_KEY) private var langCode: String = "en"
     var body: some Scene {
         WindowGroup {
             ContentView()
-        }
+        }.environment (\.locale,Locale(identifier:langCode))
     }
 }

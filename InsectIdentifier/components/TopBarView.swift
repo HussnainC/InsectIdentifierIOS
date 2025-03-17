@@ -15,7 +15,7 @@ struct TopBarView: View {
 
     var body: some View {
         HStack {
-            Text(title)
+            Text(NSLocalizedString(title,comment: ""))
                 .font(.system(size: 20, weight: .semibold))
             Spacer()
             Button(action: {
@@ -36,6 +36,6 @@ struct TopBarView: View {
 }
 
 #Preview {
-    TopBarView(title: "Change Languages")
+    TopBarView(title: "cl")
 }
 

@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import SwiftUICore
 struct IntroModel: Identifiable {
     let id = UUID()
-    let title: String
-    let description: String
+    let title: LocalizedStringKey
+    let description: LocalizedStringKey
     let image: String
 }

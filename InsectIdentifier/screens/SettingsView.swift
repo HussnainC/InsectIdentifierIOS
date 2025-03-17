@@ -17,17 +17,17 @@ struct SettingsModel: Identifiable {
 struct SettingsView: View {
     @Environment(\.presentationMode) var presentationMode
     let buttons: [SettingsModel] = [
-        SettingsModel(id: 1, title: "Introduction", icon: "ic_privacy"),
-        SettingsModel(id: 2, title: "Privacy Policy", icon: "ic_privacy"),
-        SettingsModel(id: 3, title: "Change Language", icon: "ic_languages"),
-        SettingsModel(id: 4, title: "Premium Upgrade", icon: "ic_premium"),
-        SettingsModel(id: 5, title: "Share App", icon: "ic_share")
+        SettingsModel(id: 1, title: "introduction", icon: "ic_privacy"),
+        SettingsModel(id: 2, title: "pp", icon: "ic_privacy"),
+        SettingsModel(id: 3, title: "cl", icon: "ic_languages"),
+        SettingsModel(id: 4, title: "pu", icon: "ic_premium"),
+        SettingsModel(id: 5, title: "sa", icon: "ic_share")
     ]
     @State private var navigationId: Int? = nil
     @State private var isSharing = false
     var body: some View {
         VStack {
-            TopBarView(title: "Settings", onBack: {
+            TopBarView(title: "settings", onBack: {
                 presentationMode.wrappedValue.dismiss()
             }
             ).padding(.horizontal,15)
@@ -49,7 +49,7 @@ struct SettingsView: View {
                                     .scaledToFit()
                                     .frame(width: 25, height: 25)
                                     .foregroundColor(.blue)
-                                Text(button.title)
+                                Text(NSLocalizedString(button.title,comment:""))
                                     .font(.body)
                                     .padding(.leading, 10)
                                

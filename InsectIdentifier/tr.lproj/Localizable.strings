@@ -1,0 +1,52 @@
+//
+//  Untitled.swift
+//  InsectIdentifier
+//
+//  Created by Hussnain on 17/03/2025.
+//
+
+"ai_insect" = "AI Böceği";
+"identifier" = "Tanımlayıcı";
+"sp_des" = "Yeni mi başlıyorsunuz? Bu uygulamanın yeteneklerini keşfedelim!";
+"start" = "Başlat";
+"capture_img" = "Resim Yakala";
+"gallery" = "Galeri";
+"hello" = "Merhaba";
+"home_top" = "Hızlıca tanımlayın, öğrenin ve keşfedin";
+"buttont_1" = "Böcek Tanımlama";
+"button_des_1" = "Fotoğraf çekin ve böcek detaylarını tanımlayın";
+"button_des_2" = "Galeriden seçin ve böcek detaylarını tanımlayın";
+"introt1" = "Böcek Yakalama";
+"introd1" = "Benzersiz özelliklerini, yaşam alanlarını ve doğadaki rollerini tanıyarak böceklerin büyüleyici dünyasını keşfedin.";
+"introt2" = "Böcek Tanımlama";
+"introd2" = "Benzersiz özelliklerini, yaşam alanlarını ve doğadaki rollerini tanıyarak böceklerin büyüleyici dünyasını keşfedin.";
+"introt3" = "AI Yardımı";
+"introd3" = "Bu özellik, böcek çalışmalarını ve farkındalığını artırmak için gelişmiş görüntü tanıma ve makine öğrenimi kullanır.";
+"pu" = "Premium Yükseltme";
+"nt" = "Sonraki";
+"cwa" = "Reklamlarla Devam Et";
+"skp" = "Atla";
+"en" = "İngilizce";
+"es" = "İspanyolca";
+"pt" = "Portekizce";
+"hi" = "Hintçe";
+"tr" = "Türkçe";
+"fr" = "Fransızca";
+"in" = "Endonezce";
+"cl" = "Dili Değiştir";
+"afe" = "Reklamsız Deneyim";
+"per_month" = "Aylık";
+"per_des" = "Bu abonelik, mevcut süre bitmeden en az 24 saat önce iptal edilmezse aynı süre boyunca otomatik olarak yenilenecektir. Bu aboneliği Play Store > Menü > Abonelikler bölümünden yönetebilirsiniz. Bu teklife abone olduysanız, burada bir iptal düğmesi görünecek ve istediğiniz zaman iptal edebileceksiniz. Devam ederek, Anlaşma ve Gizlilik Politikasını kabul ettiğinizi onaylarsınız.";
+"weekly" = "Haftalık";
+"monthly" = "Aylık";
+"yearly" = "Yıllık";
+"getp" = "Premium Al";
+"settings" = "Ayarlar";
+"introduction" = "Giriş";
+"pp" = "Gizlilik Politikası";
+"sa" = "Uygulamayı Paylaş";
+"message" = "Mesaj";
+"ftgr" = "Yanıt alınamadı";
+"loading" = "Yükleniyor...";
+"me" = "Ben";
+"ai" = "AI";

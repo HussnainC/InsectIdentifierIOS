@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>LSHandlerRank</key>
+			<string>None</string>
+		</dict>
+		<dict/>
+	</array>
 	<key>UIAppFonts</key>
 	<array>
 		<string>NunitoBlack.ttf</string>
@@ -9,6 +17,10 @@
 		<string>NunitoExtraBold.ttf</string>
 		<string>NunitoRegular.ttf</string>
 		<string>NunitoSemiBold.ttf</string>
+	</array>
+	<key>UTImportedTypeDeclarations</key>
+	<array>
+		<dict/>
 	</array>
 </dict>
 </plist>

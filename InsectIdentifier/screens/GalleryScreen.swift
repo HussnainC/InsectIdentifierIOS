@@ -18,7 +18,7 @@ struct GalleryScreen: View {
     @State private var selectedItem: FileItem?=nil
     var body: some View {
         VStack {
-            TopBarView(title: "Gallery", onBack: {
+            TopBarView(title: "gallery", onBack: {
                 presentationMode.wrappedValue.dismiss()
             }
             ).padding(.horizontal,15)

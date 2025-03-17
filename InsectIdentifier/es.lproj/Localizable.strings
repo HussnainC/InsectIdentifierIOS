@@ -1,0 +1,52 @@
+//
+//  Untitled.swift
+//  InsectIdentifier
+//
+//  Created by Hussnain on 17/03/2025.
+//
+
+"ai_insect" = "Insecto IA";
+"identifier" = "Identificador";
+"sp_des" = "¿Recién comenzando? ¡Hagamos un recorrido por las capacidades de esta aplicación!";
+"start" = "Iniciar";
+"capture_img" = "Capturar Imagen";
+"gallery" = "Galería";
+"hello" = "Hola";
+"home_top" = "Identifica, aprende y explora al instante";
+"buttont_1" = "Identificar Insecto";
+"button_des_1" = "Captura una foto e identifica los detalles del insecto";
+"button_des_2" = "Selecciona desde la galería e identifica los detalles del insecto";
+"introt1" = "Capturar Insecto";
+"introd1" = "Descubre el fascinante mundo de los insectos reconociendo sus características únicas, hábitats y roles en la naturaleza.";
+"introt2" = "Identificación de Insectos";
+"introd2" = "Descubre el fascinante mundo de los insectos reconociendo sus características únicas, hábitats y roles en la naturaleza.";
+"introt3" = "Asistencia IA";
+"introd3" = "Esta función utiliza reconocimiento de imagen avanzado y aprendizaje automático para mejorar el estudio y la concienciación sobre los insectos.";
+"pu" = "Actualización Premium";
+"nt" = "Siguiente";
+"cwa" = "Continuar con anuncios";
+"skp" = "Saltar";
+"en" = "Inglés";
+"es" = "Español";
+"pt" = "Portugués";
+"hi" = "Hindi";
+"tr" = "Turco";
+"fr" = "Francés";
+"in" = "Indonesio";
+"cl" = "Cambiar Idioma";
+"afe" = "Experiencia sin anuncios";
+"per_month" = "Por Mes";
+"per_des" = "Esta suscripción se renovará automáticamente por la misma duración a menos que se cancele al menos 24 horas antes de que finalice el período actual. Puedes gestionar esta suscripción desde Play Store > Menú > Suscripciones. Si te has suscrito a esta oferta, aparecerá un botón de cancelación aquí para que puedas cancelarla en cualquier momento. Al continuar, confirmas que aceptas el Acuerdo y la Política de Privacidad.";
+"weekly" = "Semanal";
+"monthly" = "Mensual";
+"yearly" = "Anual";
+"getp" = "Obtener Premium";
+"settings" = "Configuraciones";
+"introduction" = "Introducción";
+"pp" = "Política de Privacidad";
+"sa" = "Compartir Aplicación";
+"message" = "Mensaje";
+"ftgr" = "Error al obtener respuesta";
+"loading" = "Cargando...";
+"me" = "Yo";
+"ai" = "IA";

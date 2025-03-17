@@ -1,0 +1,54 @@
+//
+//  Untitled.swift
+//  InsectIdentifier
+//
+//  Created by Hussnain on 17/03/2025.
+//
+
+"ai_insect" = "AI Insect";
+"identifier" = "Identifier";
+"sp_des" = "Just getting started? Lets take a tour of this app’s capabilities!";
+"start" = "Start";
+"capture_img" = "Capture Image";
+"gallery" = "Gallery";
+"hello" = "Hello";
+"home_top" = "Instantly identify, learn, and explore";
+"buttont_1"="Insect Identify";
+"button_des_1"="Capture photo and identify insects detail";
+"button_des_2"="Select from gallery and identify insects detail";
+"introt1"="Capture Insect";
+"introd1"="Unveiling the fascinating world of insects by recognizing their unique features, habitats, and roles in nature.";
+"introt2"="Insect Identify";
+"introd2"="Unveiling the fascinating world of insects by recognizing their unique features, habitats, and roles in nature.";
+"introt3"="AI assistance";
+"introd3"="This feature uses advanced image recognition and machine learning to enhance insect study and awareness.";
+"pu"="Premium upgrade";
+"nt" = "Next";
+"cwa"="Continue with ads";
+"skp"="Skip";
+"en" = "English";
+"es" = "Spanish";
+"pt" = "Portuguese";
+"hi" = "Hindi";
+"tr" = "Turkish";
+"fr" = "French";
+"in" = "Indonesian";
+"cl" = "Change Languages";
+"afe" = "Ad-Free Experience";
+"per_month" = "Per Month";
+"per_des" = "This subscription will automatically extend for the same duration unless canceled at least 24 hours before te current period ends. You can manage this subscription from Play Store > Menu > Subscriptions. If you subscribed this offer a cancel button will appear here so you can cancel it any time. By proceeding confirm that you accept Agreement and Privacy Policy.";
+"weekly" = "Weekly";
+"monthly" = "Monthly";
+"yearly" = "Yearly";
+"getp" = "Get Premium";
+"settings" = "Settings";
+"introduction" = "Introduction";
+"pp" = "Privacy Policy";
+"sa" = "Share App";
+"message" = "Message";
+"ftgr" = "Fail to get response";
+"loading" = "Loading...";
+"me" = "Me";
+"ai" = "AI";
+
+

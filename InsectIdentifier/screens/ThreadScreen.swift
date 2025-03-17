@@ -54,7 +54,7 @@ struct ThreadScreen: View {
     
     private var bottomBar: some View {
         HStack {
-            TextField("Message", text: $textInput)
+            TextField("message", text: $textInput)
                 .padding(10)
                 .background(RoundedRectangle(cornerRadius: 50).fill(Color(.systemGray6)))
             
@@ -84,7 +84,8 @@ struct UserPromptView: View {
     var item: ThreadItem
     @State private var uiImage: UIImage?
     var body: some View {
-        HStack {
+        HStack(alignment:.top) {
+          
             Spacer()
             if case .success(let successData) = item.threadState {
                 VStack(alignment: .leading){
@@ -114,6 +115,7 @@ struct UserPromptView: View {
                     }
                 
             }
+            UserIndicator()
         }
     }
     func loadImage(path:String) {
@@ -147,9 +149,9 @@ struct AIResponseView: View {
                         .compactMap { $0.text }
                         .joined(separator: " ") ?? ""
                 case .error:
-                    return "Fail to get response"
+                    return NSLocalizedString("ftgr", comment: "Failed to get response")
                 case .loading:
-                    return "Loading..."
+                    return NSLocalizedString("loading", comment: "Loading...")
                 }
             }()
 
@@ -165,7 +167,7 @@ struct AIResponseView: View {
 
 
 struct ConversationIndicator: View {
-    var text: String
+    var text: LocalizedStringKey
     var contentColor: Color
     var containerColor: Color
     
@@ -174,7 +176,7 @@ struct ConversationIndicator: View {
             Circle()
                 .fill(containerColor)
                 .frame(width: 30, height: 30)
-            Text(String(text.prefix(2)))
+            Text(text)
                 .font(.caption)
                 .fontWeight(.medium)
                 .foregroundColor(contentColor)
@@ -184,13 +186,13 @@ struct ConversationIndicator: View {
 
 struct UserIndicator: View {
     var body: some View {
-        ConversationIndicator(text: "Me", contentColor: Color.gray, containerColor: Color.blue.opacity(0.5))
+        ConversationIndicator(text: "me", contentColor: Color.white, containerColor: Color.blue.opacity(0.5))
     }
 }
 
 struct AIIndicator: View {
     var body: some View {
-        ConversationIndicator(text: "AI", contentColor: .white, containerColor: .blue)
+        ConversationIndicator(text: "ai", contentColor: .white, containerColor: .blue)
     }
 }
 

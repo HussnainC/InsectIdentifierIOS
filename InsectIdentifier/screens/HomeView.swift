@@ -28,7 +28,7 @@ struct HomeView: View {
     private var topBar: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text("Hello")
+                Text("hello")
                     .font(.body)
                     .fontWeight(.semibold)
                     .foregroundColor(.black)
@@ -50,16 +50,16 @@ struct HomeView: View {
     private var content: some View {
         ScrollView {
             VStack(spacing: 20) {
-                Text("Instantly identify, learn, and explore")
+                Text("home_top")
                     .font(.body)
                 
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
                 PremiumBoard(price: "Rs 3456.0", title: "Per Month")
                 
-                HomeButton(
-                    title: "Insect Identify",
-                    description: "Capture photo and identify insects detail",
+                HomeButton(  title: NSLocalizedString("buttont_1", comment:""),
+                             description: NSLocalizedString("button_des_1", comment:""),
+                
                     iconName: "img_insect",
                     onClick: {
                         destination=2
@@ -67,8 +67,8 @@ struct HomeView: View {
                 )
                 
                 HomeButton(
-                    title: "Gallery",
-                    description: "Select from gallery and identify insects detail",
+                    title: NSLocalizedString("gallery", comment:""),
+                    description: NSLocalizedString("button_des_2", comment:""),
                     iconName: "img_gallery",
                     onClick: {
                         destination=3

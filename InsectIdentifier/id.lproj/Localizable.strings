@@ -1,0 +1,51 @@
+//
+//  Untitled.swift
+//  InsectIdentifier
+//
+//  Created by Hussnain on 17/03/2025.
+//
+"ai_insect" = "Serangga AI";
+"identifier" = "Pengenal";
+"sp_des" = "Baru mulai? Mari kita jelajahi kemampuan aplikasi ini!";
+"start" = "Mulai";
+"capture_img" = "Tangkap Gambar";
+"gallery" = "Galeri";
+"hello" = "Halo";
+"home_top" = "Identifikasi, pelajari, dan jelajahi dengan cepat";
+"buttont_1" = "Identifikasi Serangga";
+"button_des_1" = "Ambil foto dan identifikasi detail serangga";
+"button_des_2" = "Pilih dari galeri dan identifikasi detail serangga";
+"introt1" = "Tangkap Serangga";
+"introd1" = "Mengungkap dunia serangga yang menakjubkan dengan mengenali ciri khas, habitat, dan perannya di alam.";
+"introt2" = "Identifikasi Serangga";
+"introd2" = "Mengungkap dunia serangga yang menakjubkan dengan mengenali ciri khas, habitat, dan perannya di alam.";
+"introt3" = "Bantuan AI";
+"introd3" = "Fitur ini menggunakan pengenalan gambar canggih dan pembelajaran mesin untuk meningkatkan studi dan kesadaran tentang serangga.";
+"pu" = "Peningkatan Premium";
+"nt" = "Berikutnya";
+"cwa" = "Lanjutkan dengan iklan";
+"skp" = "Lewati";
+"en" = "Inggris";
+"es" = "Spanyol";
+"pt" = "Portugis";
+"hi" = "Hindi";
+"tr" = "Turki";
+"fr" = "Prancis";
+"in" = "Indonesia";
+"cl" = "Ubah Bahasa";
+"afe" = "Pengalaman Bebas Iklan";
+"per_month" = "Per Bulan";
+"per_des" = "Langganan ini akan diperpanjang secara otomatis untuk durasi yang sama kecuali dibatalkan setidaknya 24 jam sebelum periode saat ini berakhir. Anda dapat mengelola langganan ini dari Play Store > Menu > Langganan. Jika Anda berlangganan penawaran ini, tombol pembatalan akan muncul di sini sehingga Anda dapat membatalkannya kapan saja. Dengan melanjutkan, Anda mengonfirmasi bahwa Anda menerima Perjanjian dan Kebijakan Privasi.";
+"weekly" = "Mingguan";
+"monthly" = "Bulanan";
+"yearly" = "Tahunan";
+"getp" = "Dapatkan Premium";
+"settings" = "Pengaturan";
+"introduction" = "Pengenalan";
+"pp" = "Kebijakan Privasi";
+"sa" = "Bagikan Aplikasi";
+"message" = "Pesan";
+"ftgr" = "Gagal mendapatkan tanggapan";
+"loading" = "Memuat...";
+"me" = "Saya";
+"ai" = "AI";
