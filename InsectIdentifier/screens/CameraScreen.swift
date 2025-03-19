@@ -13,7 +13,8 @@ struct CameraScreen: View {
     @Environment(\.presentationMode) var presentationMode
     @StateObject private var cameraModel = CameraViewModel()
     @State private var isCameraAllowed: Bool = false
-    var latestImagePath: String? = nil
+    
+    @State private  var latestImagePath: String?
     var body: some View {
         ZStack {
             if(isCameraAllowed){
@@ -42,11 +43,11 @@ struct CameraScreen: View {
                     Spacer()
                     
                     Button(action: {
-//                        cameraModel.capturePhoto { path in
-//                            if let path = path {
-//                                onImageCapture(path)
-//                            }
-//                        }
+                        cameraModel.capturePhoto { path in
+                            if let path = path {
+                                latestImagePath=path
+                            }
+                        }
                     }) {
                         Circle()
                             .fill(Color.white)
@@ -88,6 +89,11 @@ struct CameraScreen: View {
         }
         .onDisappear {
             cameraModel.stopSession()
+        }.navigationDestination(item:$latestImagePath) { path in
+            if path != nil {
+                ThreadScreen(fileItem: FileItem(id: path, title: "Name", path: path))
+            }
+           
         }.navigationBarBackButtonHidden()
     }
     
