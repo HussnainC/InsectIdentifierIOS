@@ -37,8 +37,8 @@ struct IntroView: View {
             VStack{
                 Spacer()
                 VStack{
-                    Text(pages[currentPage].title).font(.title).fontWeight(.bold).padding(.bottom,5)
-                    Text(pages[currentPage].description).font(.system(size: 14))
+                    Text(pages[currentPage].title).font(.title).foregroundStyle(Color.onSurfaceColor).fontWeight(.bold).padding(.bottom,5)
+                    Text(pages[currentPage].description).font(.system(size: 14)).foregroundStyle(Color.onSurfaceColor)
                         .multilineTextAlignment(.center).padding(.horizontal,10).padding(.bottom,5)
                     
                     Button(action: {
