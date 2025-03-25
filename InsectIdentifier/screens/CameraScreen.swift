@@ -14,14 +14,15 @@ struct CameraScreen: View {
     @StateObject private var cameraModel = CameraViewModel()
     @State private var isCameraAllowed: Bool = false
     
-    @State private  var latestImagePath: String?
+    @State private  var latestImagePath: String? = nil
+    @State private var isImageCapured :Bool = false
     var body: some View {
         ZStack {
             if(isCameraAllowed){
                 CameraPreview(cameraModel: cameraModel)
                     .ignoresSafeArea()
             }
-           
+            
             
             VStack {
                 TopBarView(title: "capture_img") {
@@ -31,7 +32,7 @@ struct CameraScreen: View {
                 
                 HStack {
                     Button(action: {
-                       
+                        
                     }) {
                         Image(uiImage: latestImagePath != nil ? UIImage(contentsOfFile: latestImagePath!) ?? UIImage(contentsOfFile: "ic_gallery")! : UIImage(systemName: "photo")!)
                             .resizable()
@@ -46,6 +47,7 @@ struct CameraScreen: View {
                         cameraModel.capturePhoto { path in
                             if let path = path {
                                 latestImagePath=path
+                                isImageCapured=true
                             }
                         }
                     }) {
@@ -89,11 +91,11 @@ struct CameraScreen: View {
         }
         .onDisappear {
             cameraModel.stopSession()
-        }.navigationDestination(item:$latestImagePath) { path in
-            if path != nil {
-                ThreadScreen(fileItem: FileItem(id: path, title: "Name", path: path))
+        }.navigationDestination(isPresented: $isImageCapured) {
+            if isImageCapured{
+                ThreadScreen(fileItem: FileItem(id: latestImagePath ?? "", title: "Name", path: latestImagePath ?? ""))
             }
-           
+          
         }.navigationBarBackButtonHidden()
     }
     
