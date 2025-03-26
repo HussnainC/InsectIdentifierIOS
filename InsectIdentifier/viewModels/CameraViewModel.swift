@@ -99,7 +99,9 @@ class PhotoCaptureDelegate: NSObject, AVCapturePhotoCaptureDelegate {
         }
 
         let filename = "Image_\(Date().timeIntervalSince1970).jpeg"
-        let fileURL = FileManager.default.temporaryDirectory.appendingPathComponent(filename)
+        let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let fileURL = documents.appendingPathComponent(filename)
+      //  let fileURL = FileManager.default.temporaryDirectory.appendingPathComponent(filename)
 
         do {
             try data.write(to: fileURL)

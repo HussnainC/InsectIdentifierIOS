@@ -31,15 +31,10 @@ struct CameraScreen: View {
                 Spacer()
                 
                 HStack {
-                    Button(action: {
-                        
-                    }) {
-                        Image(uiImage: latestImagePath != nil ? UIImage(contentsOfFile: latestImagePath!) ?? UIImage(contentsOfFile: "ic_gallery")! : UIImage(systemName: "photo")!)
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                            .clipShape(RoundedRectangle(cornerRadius: 8))
-                        
-                    }
+                    Image(uiImage: latestImagePath != nil ? UIImage(contentsOfFile: latestImagePath!) ?? UIImage(contentsOfFile: "ic_gallery")! : UIImage(systemName: "photo")!)
+                        .resizable()
+                        .frame(width: 24, height: 24)
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
                     
                     Spacer()
                     
